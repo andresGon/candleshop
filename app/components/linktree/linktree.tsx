@@ -9,8 +9,7 @@ const links = [
 
 export default function Linktree() {
     return (
-        <div className="flex flex-col items-center space-y-4 py-8">
-            <h1 className="text-2xl font-bold mb-4">candle shop</h1>
+        <div className="flex flex-col items-center space-y-4">
             {links.map((link) => (
                 <Link
                     key={link.href}

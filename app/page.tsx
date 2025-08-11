@@ -50,9 +50,9 @@ const candleLinks = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+    <div className="min-h-screen">
       {/* Header */}
-      <div className="text-center py-8">
+      <div className="text-center py-8 px-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-2">
           Welcome to Candle Shop
         </h1>
@@ -61,6 +61,18 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Imagen Agregada */}
+      <div className="flex justify-center px-4">
+        <Image
+          src="https://i.pinimg.com/736x/1d/bf/b8/1dbfb8df8ba697a34b942900f1ee1204.jpg"
+          alt="Velas aromáticas decorativas"
+          width={368}
+          height={552}
+          priority
+        />
+      </div>
+      
+
       {/* Linktree Component */}
       <Linktree
         title="Candle Shop"
@@ -68,6 +80,18 @@ export default function Home() {
         profileImage="/candle-logo.jpg" // Opcional: agrega tu logo aquí
         links={candleLinks}
       />
+
+      {/* Contenedor del botón del catálogo */}
+      <div className="text-center py-8">
+        <a
+          href="/catalogo-velas.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-amber-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amber-600 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+        >
+          Revisa el catálogo
+        </a>
+      </div>
     </div>
   );
 }
